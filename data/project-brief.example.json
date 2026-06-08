@@ -1,11 +1,13 @@
 {
-  "_comment": "Пример заполненного project-brief.json. Скопируй структуру в project-brief.json и замени данные реальными данными клиента.",
-  "neuropage_meta": {
-    "pipeline_version": "1.1",
-    "generated_at": "2026-06-08T10:00:00Z",
+  "_comment": "Пример заполненного project-brief.json (schema v2.0). Скопируй структуру в project-brief.json и замени данные реальными данными клиента.",
+  "meta": {
+    "schema_version": "2.0",
+    "pipeline_version": "2.0",
+    "generated_at": "2026-06-08T14:00:00Z",
     "client_name": "Анна Петрова",
     "project_id": "np-2026-001",
-    "manager": "NeuroPage Studio"
+    "manager": "NeuroPage Studio",
+    "ready_for_cursor": true
   },
   "project_name": "FitCoach Pro",
   "project_type": "landing",
@@ -14,11 +16,25 @@
   "main_goal": "Записаться на бесплатную первую тренировку",
   "unique_value": "Персональная программа за 3 минуты + живой тренер онлайн 24/7",
   "tone": "friendly",
+  "design": {
+    "style_keywords": ["энергичный", "современный", "доверительный"],
+    "brand_colors": {
+      "primary": "#FF6B35",
+      "accent": "#1A1A2E",
+      "background": "#FAFAFA"
+    },
+    "fonts": {
+      "display": "Montserrat",
+      "body": "Inter"
+    },
+    "reference_sites": ["https://www.trainerize.com"]
+  },
   "tech_stack": {
     "framework": "Next.js 14",
     "styling": "Tailwind CSS",
     "language": "TypeScript",
-    "deploy": "Vercel"
+    "deploy": "Vercel",
+    "extra_libs": []
   },
   "sections_required": [
     "hero",
@@ -36,10 +52,11 @@
     "texts": false,
     "testimonials": true
   },
-  "brand_colors": {
-    "primary": "#FF6B35",
-    "accent": "#1A1A2E",
-    "background": "#FAFAFA"
+  "cursor_agents": {
+    "use_02_intake": true,
+    "use_03_clarifier": true,
+    "use_08_tester": false,
+    "use_09_ui_engineer": true
   },
   "open_questions": [
     "Есть ли готовые тексты для секции about?",

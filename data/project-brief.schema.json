@@ -1,102 +1,101 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "NeuroPage Project Brief",
-  "description": "Схема входных данных для Cursor Orchestrator. Генерируется автоматически Pipeline (n8n + AI) из брифа заказчика.",
+  "title": "NeuroPage Project Brief v2.0",
+  "description": "Схема валидации project-brief.json. Генерируется NeuroPage Pipeline (n8n + AI). Является единственным источником правды для агентной цепочки Cursor.",
   "type": "object",
-  "required": ["project_name", "project_type", "target_audience", "main_goal", "sections_required", "tone", "tech_stack"],
+  "required": ["meta", "project_name", "project_type", "language", "target_audience", "main_goal", "unique_value", "tone", "design", "tech_stack", "sections_required", "available_assets", "cursor_agents", "open_questions", "client_contacts"],
   "properties": {
-    "project_name": {
-      "type": "string",
-      "description": "Название бизнеса / сайта",
-      "example": "NeuroPage Studio"
-    },
-    "project_type": {
-      "type": "string",
-      "enum": ["landing", "portfolio", "promo", "service", "product"],
-      "description": "Тип сайта"
-    },
-    "target_audience": {
-      "type": "string",
-      "description": "Целевая аудитория одной фразой",
-      "example": "Малый бизнес, который хочет красивый сайт без технических знаний"
-    },
-    "main_goal": {
-      "type": "string",
-      "description": "Главный CTA / цель страницы",
-      "example": "Оставить заявку на разработку лендинга"
-    },
-    "usp": {
-      "type": "string",
-      "description": "Уникальное торговое предложение",
-      "example": "Лендинг за 72 часа с гарантией результата"
-    },
-    "sections_required": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Список секций в нужном порядке",
-      "example": ["hero", "about", "services", "portfolio", "pricing", "faq", "cta", "footer"]
-    },
-    "tone": {
-      "type": "string",
-      "enum": ["professional", "friendly", "bold", "minimal", "creative"],
-      "description": "Тон и стиль подачи"
-    },
-    "color_palette": {
+    "meta": {
       "type": "object",
+      "required": ["schema_version", "pipeline_version", "generated_at", "client_name", "project_id", "manager", "ready_for_cursor"],
       "properties": {
-        "primary": { "type": "string", "example": "#01696f" },
-        "secondary": { "type": "string" },
-        "accent": { "type": "string" },
-        "background": { "type": "string" }
+        "schema_version": { "type": "string", "enum": ["2.0"] },
+        "pipeline_version": { "type": "string" },
+        "generated_at": { "type": "string" },
+        "client_name": { "type": "string" },
+        "project_id": { "type": "string" },
+        "manager": { "type": "string" },
+        "ready_for_cursor": { "type": "boolean", "description": "true = все данные заполнены, можно запускать Cursor" }
+      }
+    },
+    "project_name": { "type": "string", "minLength": 1 },
+    "project_type": { "type": "string", "enum": ["landing", "portfolio", "promo", "multipage", "ecommerce"] },
+    "language": { "type": "string", "enum": ["ru", "en", "other"] },
+    "target_audience": { "type": "string", "minLength": 10 },
+    "main_goal": { "type": "string", "minLength": 5 },
+    "unique_value": { "type": "string", "minLength": 5 },
+    "tone": { "type": "string", "enum": ["professional", "friendly", "bold", "minimal", "luxury"] },
+    "design": {
+      "type": "object",
+      "required": ["style_keywords", "brand_colors", "fonts", "reference_sites"],
+      "properties": {
+        "style_keywords": { "type": "array", "items": { "type": "string" } },
+        "brand_colors": {
+          "type": "object",
+          "properties": {
+            "primary": { "type": "string" },
+            "accent": { "type": "string" },
+            "background": { "type": "string" }
+          }
+        },
+        "fonts": {
+          "type": "object",
+          "properties": {
+            "display": { "type": "string" },
+            "body": { "type": "string" }
+          }
+        },
+        "reference_sites": { "type": "array", "items": { "type": "string" } }
       }
     },
     "tech_stack": {
       "type": "object",
+      "required": ["framework", "styling", "language", "deploy"],
       "properties": {
         "framework": { "type": "string", "default": "Next.js 14" },
         "styling": { "type": "string", "default": "Tailwind CSS" },
-        "animations": { "type": "string", "default": "Framer Motion" },
-        "deployment": { "type": "string", "default": "Vercel" }
+        "language": { "type": "string", "default": "TypeScript" },
+        "deploy": { "type": "string", "default": "Vercel" },
+        "extra_libs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "sections_required": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 2
+    },
+    "available_assets": {
+      "type": "object",
+      "properties": {
+        "logo": { "type": "boolean" },
+        "photos": { "type": "boolean" },
+        "texts": { "type": "boolean" },
+        "testimonials": { "type": "boolean" }
+      }
+    },
+    "cursor_agents": {
+      "type": "object",
+      "description": "Флаги: какие опциональные агенты включить в этом проекте",
+      "properties": {
+        "use_02_intake": { "type": "boolean" },
+        "use_03_clarifier": { "type": "boolean" },
+        "use_08_tester": { "type": "boolean" },
+        "use_09_ui_engineer": { "type": "boolean" }
       }
     },
     "open_questions": {
       "type": "array",
       "items": { "type": "string" },
-      "description": "Вопросы к заказчику, которые AI не смог решить из брифа. Если пусто — пропустить промпт 03.",
-      "example": ["Есть ли уже логотип?", "Нужен ли блог?"]
+      "description": "Список открытых вопросов. Если не пустой — запускать 03-clarifier перед bootstrap."
     },
-    "client_name": {
-      "type": "string",
-      "description": "Имя / компания заказчика"
-    },
-    "deadline": {
-      "type": "string",
-      "format": "date",
-      "description": "Дедлайн в формате YYYY-MM-DD"
-    },
-    "budget_tier": {
-      "type": "string",
-      "enum": ["basic", "standard", "premium"],
-      "description": "Уровень пакета для понимания объёма работы"
-    },
-    "existing_assets": {
+    "client_contacts": {
       "type": "object",
       "properties": {
-        "logo": { "type": "boolean" },
-        "brand_guide": { "type": "boolean" },
-        "copy_ready": { "type": "boolean", "description": "Тексты уже написаны?" },
-        "photos": { "type": "boolean" }
+        "name": { "type": "string" },
+        "telegram": { "type": "string" },
+        "deadline": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
       }
     },
-    "pipeline_meta": {
-      "type": "object",
-      "description": "Служебные данные Pipeline (не читает Cursor)",
-      "properties": {
-        "generated_at": { "type": "string", "format": "date-time" },
-        "pipeline_version": { "type": "string" },
-        "notion_page_id": { "type": "string" },
-        "n8n_workflow_id": { "type": "string" }
-      }
-    }
+    "source_brief_ref": { "type": "string", "description": "Ссылка на Notion страницу клиента" }
   }
 }

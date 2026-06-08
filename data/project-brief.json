@@ -1,11 +1,13 @@
 {
-  "_comment": "Этот файл генерируется NeuroPage Pipeline (n8n + AI, Этап 1) и является единственным входным документом для 01-orchestrator.md. Заполни все поля перед запуском Cursor.",
-  "neuropage_meta": {
-    "pipeline_version": "1.1",
+  "_comment": "Этот файл генерируется NeuroPage Pipeline (n8n + AI, Этап 1) и является ЕДИНСТВЕННЫМ входным документом для 01-orchestrator.md. Все поля обязательны перед запуском Cursor.",
+  "meta": {
+    "schema_version": "2.0",
+    "pipeline_version": "2.0",
     "generated_at": "",
     "client_name": "",
     "project_id": "",
-    "manager": "NeuroPage Studio"
+    "manager": "NeuroPage Studio",
+    "ready_for_cursor": false
   },
   "project_name": "",
   "project_type": "landing | portfolio | promo | multipage | ecommerce",
@@ -14,11 +16,25 @@
   "main_goal": "",
   "unique_value": "",
   "tone": "professional | friendly | bold | minimal | luxury",
+  "design": {
+    "style_keywords": [],
+    "brand_colors": {
+      "primary": "",
+      "accent": "",
+      "background": ""
+    },
+    "fonts": {
+      "display": "",
+      "body": ""
+    },
+    "reference_sites": []
+  },
   "tech_stack": {
     "framework": "Next.js 14",
     "styling": "Tailwind CSS",
     "language": "TypeScript",
-    "deploy": "Vercel"
+    "deploy": "Vercel",
+    "extra_libs": []
   },
   "sections_required": [
     "hero",
@@ -33,10 +49,11 @@
     "texts": false,
     "testimonials": false
   },
-  "brand_colors": {
-    "primary": "",
-    "accent": "",
-    "background": ""
+  "cursor_agents": {
+    "use_02_intake": true,
+    "use_03_clarifier": true,
+    "use_08_tester": true,
+    "use_09_ui_engineer": true
   },
   "open_questions": [],
   "client_contacts": {
