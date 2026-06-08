@@ -1,0 +1,21 @@
+{
+  "fonts": {
+    "display": "Cabinet Grotesk",
+    "body": "Satoshi",
+    "source": "fontshare"
+  },
+  "colors": {
+    "primary": "#FF6B35",
+    "primary_hover": "#E55A24",
+    "secondary": "#1A1A2E",
+    "background": "#FAFAFA",
+    "surface": "#FFFFFF",
+    "text": "#1A1A2E",
+    "text_muted": "#6B7280",
+    "accent": "#FF6B35"
+  },
+  "border_radius": "12px",
+  "spacing_unit": "4px",
+  "shadow_style": "soft",
+  "dark_mode": false
+}

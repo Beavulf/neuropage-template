@@ -1,0 +1,55 @@
+{
+  "sections": [
+    {
+      "id": "hero",
+      "order": 1,
+      "component": "HeroSection",
+      "layout": "split",
+      "has_image": true,
+      "has_cta": true,
+      "cta_text": "Записаться бесплатно"
+    },
+    {
+      "id": "how-it-works",
+      "order": 2,
+      "component": "StepsSection",
+      "layout": "3-column",
+      "steps_count": 3
+    },
+    {
+      "id": "pricing",
+      "order": 3,
+      "component": "PricingSection",
+      "layout": "cards",
+      "plans_count": 3,
+      "highlight_plan": "standard"
+    },
+    {
+      "id": "testimonials",
+      "order": 4,
+      "component": "TestimonialsSection",
+      "layout": "carousel",
+      "items_count": 5
+    },
+    {
+      "id": "faq",
+      "order": 5,
+      "component": "FaqSection",
+      "layout": "accordion",
+      "items_count": 6
+    },
+    {
+      "id": "cta",
+      "order": 6,
+      "component": "CtaSection",
+      "layout": "centered",
+      "has_form": true
+    },
+    {
+      "id": "footer",
+      "order": 7,
+      "component": "Footer",
+      "layout": "simple"
+    }
+  ]
+}

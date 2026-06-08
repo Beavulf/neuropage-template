@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NeuroPage Project Brief",
+  "description": "Схема входных данных для Cursor Orchestrator. Генерируется автоматически Pipeline (n8n + AI) из брифа заказчика.",
+  "type": "object",
+  "required": ["project_name", "project_type", "target_audience", "main_goal", "sections_required", "tone", "tech_stack"],
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "description": "Название бизнеса / сайта",
+      "example": "NeuroPage Studio"
+    },
+    "project_type": {
+      "type": "string",
+      "enum": ["landing", "portfolio", "promo", "service", "product"],
+      "description": "Тип сайта"
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Целевая аудитория одной фразой",
+      "example": "Малый бизнес, который хочет красивый сайт без технических знаний"
+    },
+    "main_goal": {
+      "type": "string",
+      "description": "Главный CTA / цель страницы",
+      "example": "Оставить заявку на разработку лендинга"
+    },
+    "usp": {
+      "type": "string",
+      "description": "Уникальное торговое предложение",
+      "example": "Лендинг за 72 часа с гарантией результата"
+    },
+    "sections_required": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Список секций в нужном порядке",
+      "example": ["hero", "about", "services", "portfolio", "pricing", "faq", "cta", "footer"]
+    },
+    "tone": {
+      "type": "string",
+      "enum": ["professional", "friendly", "bold", "minimal", "creative"],
+      "description": "Тон и стиль подачи"
+    },
+    "color_palette": {
+      "type": "object",
+      "properties": {
+        "primary": { "type": "string", "example": "#01696f" },
+        "secondary": { "type": "string" },
+        "accent": { "type": "string" },
+        "background": { "type": "string" }
+      }
+    },
+    "tech_stack": {
+      "type": "object",
+      "properties": {
+        "framework": { "type": "string", "default": "Next.js 14" },
+        "styling": { "type": "string", "default": "Tailwind CSS" },
+        "animations": { "type": "string", "default": "Framer Motion" },
+        "deployment": { "type": "string", "default": "Vercel" }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Вопросы к заказчику, которые AI не смог решить из брифа. Если пусто — пропустить промпт 03.",
+      "example": ["Есть ли уже логотип?", "Нужен ли блог?"]
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Имя / компания заказчика"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Дедлайн в формате YYYY-MM-DD"
+    },
+    "budget_tier": {
+      "type": "string",
+      "enum": ["basic", "standard", "premium"],
+      "description": "Уровень пакета для понимания объёма работы"
+    },
+    "existing_assets": {
+      "type": "object",
+      "properties": {
+        "logo": { "type": "boolean" },
+        "brand_guide": { "type": "boolean" },
+        "copy_ready": { "type": "boolean", "description": "Тексты уже написаны?" },
+        "photos": { "type": "boolean" }
+      }
+    },
+    "pipeline_meta": {
+      "type": "object",
+      "description": "Служебные данные Pipeline (не читает Cursor)",
+      "properties": {
+        "generated_at": { "type": "string", "format": "date-time" },
+        "pipeline_version": { "type": "string" },
+        "notion_page_id": { "type": "string" },
+        "n8n_workflow_id": { "type": "string" }
+      }
+    }
+  }
+}

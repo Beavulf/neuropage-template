@@ -1,0 +1,23 @@
+---
+alwaysApply: true
+---
+# NeuroPage Template Rules
+
+Это шаблон NeuroPage Studio для генерации лендингов.
+
+## Источник правды
+Всегда читай `data/*.json` перед тем как писать код:
+- `data/project-brief.json` — параметры проекта (tech stack, цели, аудитория)
+- `data/site.json` — SEO, мета-данные
+- `data/theme.json` — цвета, шрифты, стили
+- `data/sections.json` — структура и порядок секций
+- `data/final-copy.json` — ВСЕ тексты (не хардкодить!)
+
+## Правила
+- Следуй CLAUDE.md (создаётся агентом 04-bootstrap)
+- Следуй AGENTS.md (создаётся агентом 04-bootstrap)
+- Следуй docs/ARCHITECTURE.md
+- Mobile-first всегда
+- TypeScript strict mode
+- Тексты ТОЛЬКО из data/final-copy.json
+- Цвета ТОЛЬКО из data/theme.json

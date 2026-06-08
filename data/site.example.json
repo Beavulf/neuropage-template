@@ -1,0 +1,14 @@
+{
+  "site_title": "FitCoach Pro — Твой личный онлайн-тренер",
+  "site_description": "Персональная программа тренировок онлайн. Первая тренировка бесплатно.",
+  "domain_suggestion": "fitcoachpro.ru",
+  "language": "ru",
+  "meta": {
+    "og_image": "hero-image.jpg",
+    "keywords": ["онлайн тренер", "похудеть", "фитнес онлайн"]
+  },
+  "analytics": {
+    "yandex_metrika": null,
+    "google_analytics": null
+  }
+}
