@@ -1,27 +1,48 @@
 {
-  "_comment": "Этот файл генерируется NeuroPage Pipeline (n8n + AI) и является входной точкой для Cursor агентной системы. Заполни все поля перед запуском 01-orchestrator.md",
+  "_comment": "Этот файл генерируется NeuroPage Pipeline (n8n + AI, Этап 1) и является единственным входным документом для 01-orchestrator.md. Заполни все поля перед запуском Cursor.",
   "neuropage_meta": {
-    "pipeline_version": "1.0",
+    "pipeline_version": "1.1",
     "generated_at": "",
     "client_name": "",
     "project_id": "",
     "manager": "NeuroPage Studio"
   },
   "project_name": "",
-  "one_sentence_summary": "",
-  "project_type": "landing-page",
-  "target_users": [],
-  "core_jobs_to_be_done": [],
-  "key_pages_or_screens": [],
-  "main_entities": [],
-  "business_rules": [],
-  "edge_cases": [],
-  "constraints": [],
-  "stack_preferences": "Next.js + Tailwind CSS",
-  "ui_system_preferences": "shadcn/ui",
-  "tone": "",
-  "main_cta": "",
-  "non_goals": [],
-  "assumptions": [],
-  "open_questions": []
+  "project_type": "landing | portfolio | promo | multipage | ecommerce",
+  "language": "ru | en | other",
+  "target_audience": "",
+  "main_goal": "",
+  "unique_value": "",
+  "tone": "professional | friendly | bold | minimal | luxury",
+  "tech_stack": {
+    "framework": "Next.js 14",
+    "styling": "Tailwind CSS",
+    "language": "TypeScript",
+    "deploy": "Vercel"
+  },
+  "sections_required": [
+    "hero",
+    "about",
+    "services",
+    "cta",
+    "footer"
+  ],
+  "available_assets": {
+    "logo": false,
+    "photos": false,
+    "texts": false,
+    "testimonials": false
+  },
+  "brand_colors": {
+    "primary": "",
+    "accent": "",
+    "background": ""
+  },
+  "open_questions": [],
+  "client_contacts": {
+    "name": "",
+    "telegram": "",
+    "deadline": ""
+  },
+  "source_brief_ref": ""
 }
