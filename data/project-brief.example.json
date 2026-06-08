@@ -1,37 +1,54 @@
 {
+  "_comment": "Пример заполненного project-brief.json. Скопируй структуру в project-brief.json и замени данные реальными данными клиента.",
+  "neuropage_meta": {
+    "pipeline_version": "1.1",
+    "generated_at": "2026-06-08T10:00:00Z",
+    "client_name": "Анна Петрова",
+    "project_id": "np-2026-001",
+    "manager": "NeuroPage Studio"
+  },
   "project_name": "FitCoach Pro",
   "project_type": "landing",
-  "target_audience": "Люди 25-45 лет, которые хотят похудеть и получить онлайн-тренера",
+  "language": "ru",
+  "target_audience": "Мужчины и женщины 25–45 лет, которые хотят похудеть и получить персонального онлайн-тренера",
   "main_goal": "Записаться на бесплатную первую тренировку",
-  "usp": "Персональная программа за 3 минуты + живой тренер онлайн",
-  "sections_required": ["hero", "about", "how-it-works", "pricing", "testimonials", "faq", "cta", "footer"],
+  "unique_value": "Персональная программа за 3 минуты + живой тренер онлайн 24/7",
   "tone": "friendly",
-  "color_palette": {
-    "primary": "#FF6B35",
-    "secondary": "#1A1A2E",
-    "accent": "#FFFFFF",
-    "background": "#FAFAFA"
-  },
   "tech_stack": {
     "framework": "Next.js 14",
     "styling": "Tailwind CSS",
-    "animations": "Framer Motion",
-    "deployment": "Vercel"
+    "language": "TypeScript",
+    "deploy": "Vercel"
   },
-  "open_questions": [],
-  "client_name": "Анна Петрова",
-  "deadline": "2026-06-20",
-  "budget_tier": "standard",
-  "existing_assets": {
+  "sections_required": [
+    "hero",
+    "about",
+    "how-it-works",
+    "pricing",
+    "testimonials",
+    "faq",
+    "cta",
+    "footer"
+  ],
+  "available_assets": {
     "logo": true,
-    "brand_guide": false,
-    "copy_ready": false,
-    "photos": true
+    "photos": true,
+    "texts": false,
+    "testimonials": true
   },
-  "pipeline_meta": {
-    "generated_at": "2026-06-08T11:00:00Z",
-    "pipeline_version": "1.0",
-    "notion_page_id": "abc123",
-    "n8n_workflow_id": "wf_001"
-  }
+  "brand_colors": {
+    "primary": "#FF6B35",
+    "accent": "#1A1A2E",
+    "background": "#FAFAFA"
+  },
+  "open_questions": [
+    "Есть ли готовые тексты для секции about?",
+    "Какая цена указывается на странице цен?"
+  ],
+  "client_contacts": {
+    "name": "Анна Петрова",
+    "telegram": "@annapro",
+    "deadline": "2026-07-01"
+  },
+  "source_brief_ref": "Notion: https://notion.so/neuropage/clients/fitcoach-pro"
 }
