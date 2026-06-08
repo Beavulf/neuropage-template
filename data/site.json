@@ -1,0 +1,18 @@
+{
+  "_comment": "Настройки сайта. Генерируется NeuroPage Pipeline на Этапе 1.",
+  "site_name": "",
+  "domain": "",
+  "language": "ru",
+  "meta_title": "",
+  "meta_description": "",
+  "og_image": "",
+  "favicon": "",
+  "analytics_id": "",
+  "contact_email": "",
+  "social_links": {
+    "telegram": "",
+    "instagram": "",
+    "vk": "",
+    "whatsapp": ""
+  }
+}

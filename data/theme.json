@@ -1,0 +1,33 @@
+{
+  "_comment": "Визуальные токены дизайн-системы. Генерируется NeuroPage Pipeline на Этапе 2.",
+  "colors": {
+    "primary": "",
+    "primary_hover": "",
+    "secondary": "",
+    "accent": "",
+    "background": "",
+    "surface": "",
+    "text": "",
+    "text_muted": "",
+    "border": "",
+    "error": "",
+    "success": ""
+  },
+  "typography": {
+    "font_display": "",
+    "font_body": "",
+    "font_size_base": "16px",
+    "font_size_hero": "",
+    "line_height": "1.6"
+  },
+  "spacing": {
+    "section_padding": "",
+    "container_max_width": "1200px",
+    "border_radius": "8px"
+  },
+  "style": {
+    "mood": "",
+    "style_direction": "",
+    "references": []
+  }
+}

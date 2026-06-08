@@ -1,0 +1,49 @@
+{
+  "_comment": "Финальные тексты и копирайтинг. Генерируется NeuroPage Pipeline на Этапе 3 (copy-deck). Это единственный источник текстов для Implementer и UI Engineer.",
+  "global": {
+    "company_name": "",
+    "tagline": "",
+    "cta_primary": "",
+    "cta_secondary": "",
+    "footer_text": ""
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "heading": "",
+        "subheading": "",
+        "cta_text": "",
+        "cta_url": ""
+      },
+      "features": {
+        "heading": "",
+        "items": [
+          {
+            "title": "",
+            "description": "",
+            "icon": ""
+          }
+        ]
+      },
+      "about": {
+        "heading": "",
+        "body": ""
+      },
+      "testimonials": {
+        "heading": "",
+        "items": []
+      },
+      "cta_block": {
+        "heading": "",
+        "subtext": "",
+        "button_text": ""
+      }
+    }
+  },
+  "nav": {
+    "links": []
+  },
+  "footer": {
+    "columns": []
+  }
+}

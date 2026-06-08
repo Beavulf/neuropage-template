@@ -1,0 +1,36 @@
+{
+  "_comment": "Структура страниц и секций сайта. Генерируется NeuroPage Pipeline на Этапе 2 (page-outline).",
+  "pages": [
+    {
+      "page_id": "home",
+      "page_name": "Главная",
+      "url": "/",
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero",
+          "order": 1,
+          "heading": "",
+          "subheading": "",
+          "cta_primary": "",
+          "cta_secondary": "",
+          "visual": ""
+        },
+        {
+          "section_id": "features",
+          "section_type": "features",
+          "order": 2,
+          "heading": "",
+          "items": []
+        },
+        {
+          "section_id": "cta",
+          "section_type": "cta_block",
+          "order": 3,
+          "heading": "",
+          "button_text": ""
+        }
+      ]
+    }
+  ]
+}

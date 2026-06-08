@@ -1,0 +1,27 @@
+{
+  "_comment": "Этот файл генерируется NeuroPage Pipeline (n8n + AI) и является входной точкой для Cursor агентной системы. Заполни все поля перед запуском 01-orchestrator.md",
+  "neuropage_meta": {
+    "pipeline_version": "1.0",
+    "generated_at": "",
+    "client_name": "",
+    "project_id": "",
+    "manager": "NeuroPage Studio"
+  },
+  "project_name": "",
+  "one_sentence_summary": "",
+  "project_type": "landing-page",
+  "target_users": [],
+  "core_jobs_to_be_done": [],
+  "key_pages_or_screens": [],
+  "main_entities": [],
+  "business_rules": [],
+  "edge_cases": [],
+  "constraints": [],
+  "stack_preferences": "Next.js + Tailwind CSS",
+  "ui_system_preferences": "shadcn/ui",
+  "tone": "",
+  "main_cta": "",
+  "non_goals": [],
+  "assumptions": [],
+  "open_questions": []
+}
